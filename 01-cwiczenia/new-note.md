@@ -47,11 +47,11 @@
 
 | Parametr | wartość           | komentarzu |
 | ------------- |:-------------:| -----:|
-| Adres IP      |   10.0.2.15      | ip addr |
+| Adres IP      |   10.0.2.15   | ip addr |
 | Maska podsieci| /24 (255.255.255.0)  11111111.11111111.11111111.0 |  ip addr   |
-| Brama         |  10.0.2.2       | ip route show / default value |
-| DNS 1         |  8.8.8.8        | cat /etc/resolv.conf     |
-| DNS 2         |          |      |
+| Brama         |  10.0.2.2     | ip route show / default value |
+| DNS 1         |  8.8.8.8      | cat /etc/resolv.conf     |
+| DNS 2         |  1.1.1.1      |      |
 
 ### Schemat sieci
 
@@ -68,19 +68,19 @@ aby załączyć obrazek
 ### Wirtualizacja typy sieci
 
 Przetestuj parametry sieci dla różnych typów wspieranych przez Twoje oprogramowanie. każdą konfigurację opatrz komentarzem co do funkcjonalności. 
-* połączenie z internetem Tak / Nie
-* połączenie z innymi wirtualnymi maszynami Tak / Nie
-* połączenie z komputerem Hostem Tak / Nie
-* połączenie z innymi urządzeniami w sieci Hosta Tak / Nie
+* 1.połączenie z internetem Tak / Nie
+* 2.połączenie z innymi wirtualnymi maszynami Tak / Nie
+* 3.połączenie z komputerem Hostem Tak / Nie
+* 4.połączenie z innymi urządzeniami w sieci Hosta Tak / Nie
 
 
 
 -------------------------
 | Program | Typ | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
-|Virtualbox|bridge||
-|Virtualbox|hostonly||
-|Virtualbox|nat||
+|Virtualbox|bridge|1:Tak;2:Tak;3:Tak;4:Tak;|
+|Virtualbox|hostonly|VM z alpine nie startuje|
+|Virtualbox|nat|1:Tak;2:Nie;3:Tak;4:Tak;|
 
 
 ### Ustawienia dla innego oprogramowania
